@@ -1,0 +1,195 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 30 Jul 2023, 3:59:38 pm
+    Author     : ooiye
+*/
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #457046;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+.floating-button:hover {
+  width: 55px;
+  height: 55px;
+  transform: scale(1.08);
+}
+
+.floating-button img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  position: absolute;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.floating-button.transitioning {
+  transition: transform 0.3s ease-in-out;
+}
+
+.floating-button:hover img {
+    width: 45px;
+    height: 45px;
+}
+
+/* Show chat platform when active */
+.chat-platform.active {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.chat-platform {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 400px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  z-index: 999;
+  opacity: 0;
+  transform-origin: bottom right;
+  animation-name: chatPlatformTransition;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.chat-header {
+  padding: 15px;
+  background-color: #457046;
+  color: #fff;
+  border-radius: 25px 25px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-title {
+  font-size: 18px;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+
+.chat-input input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  padding-left: 20px;
+  border: none;
+  border-radius: 25px;
+}
+
+.send-button-img {
+  width: 30px; 
+  height: 30px; 
+  object-fit: contain;
+  align-items: center;
+  filter: brightness(0) invert(1); /* Set the image color to white */
+}
+
+.chat-input button {
+  background-color: #457046; /* Set the background color to green */
+  color: #fff;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@keyframes chatPlatformTransition {
+  0% {
+    transform: scale(0); /* Start from 0% size (completely hidden) */
+    opacity: 0; /* Fully transparent */
+  }
+  100% {
+    transform: scale(1); /* Grow to full size */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+@keyframes chatPlatformShrink {
+  0% {
+    transform: scale(1); /* Start from 100% size (fully visible) */
+    opacity: 1; /* Fully visible */
+  }
+  100% {
+    transform: scale(0); /* Shrink back to 0% size (completely hidden) */
+    opacity: 0; /* Fully transparent */
+  }
+}
+
+/* Apply the animation when closing the chat platform */
+.chat-platform:not(.active) {
+  animation-name: chatPlatformShrink;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.reply-button {
+    padding: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.chat-messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  height: 400px; 
+  overflow-y: auto; 
+  background-color: #f1f1f1;
+}
+
+.chat-message {
+    max-width: 70%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 25px;
+    background-color: #e5f3f5; 
+}
+
+.user-message {
+    background-color: #457046;
+    align-self: flex-end;
+    color: #fff;
+}
+
+.admin-message {
+    background-color: #fff;
+    color: #457046;
+    align-self: flex-start;
+    border-radius: 25px;
+    margin: 5px;
+    padding: 10px;
+}
+
+
+
+
+
+    

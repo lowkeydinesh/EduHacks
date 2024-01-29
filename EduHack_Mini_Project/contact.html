@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+
+    
+  <style>
+.modal {
+  z-index: 1000; /* Adjust the value as needed */
+}
+
+ 
+.login-modal-content {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.donate-modal-content {
+    
+}
+
+  /* Style for the close button */
+  .close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+  }
+
+  /* Style for the call-to-action button */
+  .subscribe-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6fae62;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .subscribe-button:hover {
+    background-color: #589e4e;
+  }
+  
+  #loginIframe {
+        border-radius: 14px; /* Adjust the value as needed */
+    }
+
+    /* Add any other custom styles for the modal here */
+  </style>
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"    ></script>
+  </head>
+  <body>
+      
+ <header>
+    <div class="logo69" id = "main">
+      <img src="images/icon.png" alt="Your Logo">
+          <p>CarbonAware</p>
+    </div>
+    <nav>
+      <ul>
+<li class="dropdown69">
+      <a href="#">About</a>
+      <ul class="dropdown-menu69">
+        <li><a href="what_we_do.html">What We Do</a></li>
+         <li><a href="partners.html">Partners</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+      <li><a href="newhtml.html">News</a></li>
+      <li><a href="readme.html">Read Me</a></li>
+<!-- Change the link to a button or span element -->
+<li><button id="showLoginButton">Login</button></li>
+        
+        <li><a href="#"  id="showdonateButton" class="action-button">Take Action</a></li>
+      </ul>
+    </nav>
+  </header>
+     
+      
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="img/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Get in touch with CarbonAware</h3>
+          <p class="text">
+            Reach out to us for more information about our app and its features.
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="img/location.png" class="icon" alt="" />
+              <p>42 Eco Avenue, Sustainable City, SG 12345</p>
+            </div>
+            <div class="information">
+              <img src="img/email.png" class="icon" alt="" />
+              <p>info@carbonaware.sg</p>
+            </div>
+            <div class="information">
+              <img src="img/phone.png" class="icon" alt="" />
+              <p>987-654-3210</p>
+            </div>
+          </div>
+
+       
+        </div>
+
+         <div class="contact-form">
+        <span class="circle one"></span>
+        <span class="circle two"></span>
+
+        <form
+          action="https://formspree.io/f/xleyjngr"
+          method="POST"
+          autocomplete="off"
+        >
+          <h3 class="title">Contact us</h3>
+          <div class="input-container">
+            <input type="text" name="name" class="input" />
+            <label for="">Username</label>
+            <span>Username</span>
+          </div>
+          <div class="input-container">
+            <input type="email" name="email" class="input" />
+            <label for="">Email</label>
+            <span>Email</span>
+          </div>
+          <div class="input-container">
+            <input type="tel" name="phone" class="input" />
+            <label for="">Phone</label>
+            <span>Phone</span>
+          </div>
+          <div class="input-container textarea">
+            <textarea name="message" class="input"></textarea>
+            <label for="">Message</label>
+            <span>Message</span>
+          </div>
+          <input type="submit" value="Send" class="btn" />
+        </form>
+      </div>
+    </div>
+  </div>
+      
+<footer class="footer bg-green-900 text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between">
+    <div class="flex items-center">
+      <img src="images/icon.png" alt="Your Logo" class="max-w-12">
+      <p class="text-xl font-bold ml-3">CarbonAware</p>
+    </div>
+    <div class="flex items-center my-2 sm:my-0">
+      <a href="partners.html" class="text-white mr-4">The Team <span>&rarr;</span></a>
+      <a href="contact.html" id="contact" class="text-white">Contact Us <span>&rarr;</span></a>
+    </div>
+    <div class="flex items-center my-2 sm:my-0">
+      <!-- Replace the URLs and icons with appropriate ones -->
+      <a href="https://twitter.com/" class="mr-4"><img src="images/twitter-icon.png" alt="Twitter" class="w-6 h-6"></a>
+      <a href="https://www.instagram.com/" class="mr-4"><img src="images/instagram-icon.png" alt="Instagram" class="w-6 h-6"></a>
+      <a href="https://www.youtube.com/" class="mr-4"><img src="images/youtube-icon.png" alt="YouTube" class="w-6 h-6"></a>
+      <a href="https://www.facebook.com/"><img src="images/facebook-icon.png" alt="Facebook" class="w-6 h-6"></a>
+ </div>
+    <div class="flex items-center my-2 sm:my-0">
+      <form class="flex">
+        <input type="email" id="email1" placeholder="Your Email Address" class="px-4 py-2 rounded-l-md border border-r-0 border-white focus:outline-none focus:ring focus:border-blue-300 text-black">
+        <button type="submit" id="subscribeBtn" class="px-4 py-2 rounded-r-md bg-white text-black font-bold">Subscribe</button>
+      </form>
+      <p id="thankYouMessage" class="ml-2 text-sm text-green-500 hidden">Thank you for subscribing!</p>
+    </div>
+  </div>
+  <p class="text-center">&copy; 2023 Our Organization. All rights reserved.</p>
+</footer>
+<div id="loginModal" class="modal">
+  <div class="login-modal-content">
+    <span class="close" onclick="closeLoginModal()">&times;</span>
+    <iframe id="loginIframe" src="login.html" width="850" height="500"></iframe>
+  </div>
+</div>
+<div id="donateModal" class="modal">
+  <div class="login-modal-content">
+    <span class="close" onclick="closedonateModal()">&times;</span>
+    <iframe id="donateIframe" src="donationindex.html" width="900" height="650"></iframe>
+  </div>
+</div>
+  
+
+
+    <script>
+        
+  var loginModal = document.getElementById("loginModal");
+  var loginIframe = document.getElementById("loginIframe");
+  var showLoginButton = document.getElementById("showLoginButton");
+
+  function openLoginModal() {
+    loginModal.style.display = "block";
+  }
+
+  function closeLoginModal() {
+    loginModal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target === loginModal || event.target.classList.contains("close")) {
+      closeLoginModal();
+    }
+  };
+
+  showLoginButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    openLoginModal();
+  });
+      
+  var donateModal = document.getElementById("donateModal");
+  var donateIframe = document.getElementById("donateIframe");
+  var showdonateButton = document.getElementById("showdonateButton");
+  
+  function opendonateModal() {
+    donateModal.style.display = "block";
+  }
+
+  function closedonateModal() {
+    donateModal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target === donateModal || event.target.classList.contains("close")) {
+      closedonateModal();
+    }
+  };
+
+  showdonateButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    opendonateModal();
+  });
+  
+const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});
+function login() {
+    const username = document.getElementById('fname').value;
+    const password = document.getElementById('pword').value;
+
+    if (username === 'Dinesh' && password === '123') {
+        alert('Login successful!');
+        window.location.href = 'Stats.html';
+    } else {
+        alert('Invalid username or password. Please try again.');
+    }
+}
+
+ 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,784 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 25 Jul 2023, 11:55:30 pm
+    Author     : User
+*/
+
+/* Add your CSS styles here */
+/* You can customize the colors, fonts, spacing, and animations as needed */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #004d32; /* Dark green background for the header */
+  color: #fff;
+  padding: 20px;
+}
+
+.logo img {
+  max-width: 100px;
+}
+
+nav {
+  /* Add your navigation styles here */
+}
+
+main {
+  position: relative;
+}
+
+.background-animation {
+  /* Add your background animation styles here */
+  /* You can use CSS animations or external libraries like particles.js */
+}
+
+.contact-form {
+  /* Add your contact form styles here */
+  /* You can use flexbox or grid for layout */
+  padding: 20px;
+}
+
+.contact-form h2 {
+  color: #004d32;
+}
+
+.contact-form form {
+  /* Add your form styles here */
+}
+
+.contact-form input,
+.contact-form textarea {
+  /* Add your input and textarea styles here */
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.contact-form button {
+  /* Add your button styles here */
+  background-color: #ffa500; /* Orange background for the button */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-info {
+  /* Add your contact information styles here */
+  padding: 20px;
+  color: #004d32;
+}
+
+.interactive-map {
+  /* Add your interactive map styles here */
+  /* For demonstration purposes, a placeholder image is used */
+  text-align: center;
+}
+
+.interactive-map img {
+  max-width: 100%;
+}
+
+.thank-you {
+  /* Add your Thank You message styles here */
+  display: none;
+  /* You can use CSS transitions or animations for the Thank You message */
+}
+
+.footer {
+  /* Add your footer styles here */
+  /* You can include social media icons, newsletter signup, and additional links */
+}
+
+/* Reset some default styles to ensure consistent behavior */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles for the header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+    background-color: #004d32; /* Dark greenish background color */
+
+}
+
+.logo img {
+  max-height: 50px; /* Adjust the height as needed */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 10px;
+      color: #fff;
+
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  
+}
+
+nav ul li {
+  margin-left: 20px;
+  
+}
+
+nav ul li a:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333; /* Adjust the color as needed */
+  padding: 5px 10px;
+  border: 1px solid transparent;
+    color: #fff;
+
+}
+
+/* Slideshow container */
+.slideshow-wrapper {
+  position: relative;
+}
+.action-button {
+  background-color: #ccc; /* Muted orange background color */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #ccc; /* Lighter shade of muted orange on hover */
+}
+
+/* Styles for the slideshow section */
+.slideshow {
+  /* Add your styles here for the slideshow container */
+}
+.slideshow-image {
+  width: 100%;
+  height: auto;
+}
+.slideshow img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Text and button overlay */
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Add a shadow effect (adjust the values for blur, spread, and color as desired) */
+}
+
+.text-overlay h2 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.text-overlay h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.learn-more-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ccc; /* Adjust the color to your desired greyish shade */
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+/* Styles for the dropdown menu */
+/* Styles for the dropdown menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+/* Show the dropdown menu when hovering over the "About" link */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Optional: Style the dropdown menu links */
+.dropdown-menu li {
+  background-color: #fff;
+  padding: 8px;
+}
+
+.dropdown-menu li a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Optional: Style the dropdown menu links on hover/focus */
+.dropdown-menu li a:hover,
+.dropdown-menu li a:focus {
+  background-color: #f0f0f0;
+}
+
+/* Ensure all dropdown items align with the "About" link */
+.dropdown-menu li {
+  left: 0;
+  width: 100%;
+}
+
+/* Additional styles to prevent slideshow animation from affecting dropdown */
+.slideshow-wrapper {
+  overflow: hidden;
+}
+/* Styles for the text container */
+.info-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.info-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.info-container p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+/* Slideshow container and other styles (from the previous example) */
+/* ... */
+
+/* Video section */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust as needed, 100vh makes it full viewport height */
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire container without black bars */
+}
+/* Footer styles */
+.footer {
+  background-color: #004d32; /* Dark greenish background color */
+  color: #fff; /* Text color for the footer */
+  padding: 40px 0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo img {
+    max-width: 40px; /* Adjust the logo size as needed */
+  vertical-align: middle; /* Align the logo vertically with text */
+}
+
+.footer-logo p {
+ font-size: 24px;
+  font-weight: bold;
+  margin-left: 10px;
+  vertical-align: middle; /* Align the text vertically with the logo */
+}
+.footer-links,
+.footer-social,
+.footer-newsletter {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a,
+.footer-social a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.footer-links a span,
+.footer-social a img {
+  margin-left: 5px;
+    font-size: 12px; /* Tiny icon size */
+}
+
+.footer-newsletter form {
+  display: flex;
+  align-items: center;
+}
+
+.footer-newsletter input[type="email"],
+.footer-newsletter button {
+  padding: 10px;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+
+.footer-newsletter button {
+  margin-left: 10px;
+}
+
+/* Responsiveness for the footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-logo p {
+    margin-left: 0;
+  }
+
+  .footer-links,
+  .footer-social,
+  .footer-newsletter {
+    margin-bottom: 20px;
+  }
+
+  .footer-links a,
+  .footer-social a {
+    margin-right: 0;  }
+
+  .footer-links a span,
+  .footer-social a img {
+    margin-left: 3px;
+  }
+
+  .footer-newsletter input[type="email"],
+  .footer-newsletter button {
+    padding: 8px;
+  }
+}
+/* Your existing CSS styles */
+/* ... */
+
+/* Styling for the block containers */
+.block-container {
+  background-color: #f0f2f2; /* Light gray background color */
+  padding: 50px; /* Adjust the padding as needed for spacing */
+}
+
+.block-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styling for the block text */
+.block-text {
+  padding-right: 50px; /* Spacing between text and image */
+  padding-left: 50px; /* Spacing between text and image */
+}
+
+.block-text h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.block-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Styling for the block images */
+.block-image {
+  flex: 1;
+}
+
+.block-image img {
+  width: 100%; /* Make the image responsive within its container */
+  display: block;
+  border-radius: 4px;
+}
+
+/* Your existing CSS styles */
+/* ... */
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+      justify-items: center; /* Center the grid items horizontally */
+    margin: 0 auto; /* Auto margin to center the grid */
+
+}
+
+.grid-item {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     max-width: 400px; /* Set the maximum width for chart containers */
+    height: 400px; /* Set the fixed height for chart containers */
+
+}
+/* Additional CSS for canvas to ensure they fit within the container */
+.grid-item canvas {
+    max-width: 100%;
+    height: 100%;
+}
+
+#backgroundVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5; /* Adjust the opacity to your preference */
+  z-index: -1;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --linear-grad: linear-gradient(to right,  #457046,  #457046);
+    --grad-clr1:  #457046;
+    --grad-clr2:  #457046;
+}
+
+
+
+.container {
+    position: relative;
+    width: 850px;
+    height: 500px;
+    background-color: #FFF;
+    box-shadow: 25px 30px 55px  #5557;
+    border-radius: 13px;
+    overflow: hidden;
+        
+}
+
+.sign-up-container{
+    opacity: 0;
+    z-index: 1;
+}
+
+.sign-in-container{
+    z-index: 2;
+}
+
+
+
+h1{
+    color: var(--grad-clr1);
+    
+}
+
+.infield {
+    position: relative;
+    margin: 8px 0px;
+    width: 100%;
+}
+input{
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #f3f3f3;
+    border: none;
+    outline: none;
+    
+}
+
+label{
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background: var(--linear-grad);
+}
+
+input:focus ~ label {
+    width: 100%;
+}
+a{
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0px;
+}
+a.forgot{
+    padding-bottom: 3px;
+    border-bottom: 2px solid #EEE;
+}
+
+
+.error {
+      color: red;
+    }
+.overlay-container{
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 9;
+}
+#overlayBtn{
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 304px;
+    transform: translateX(-50%);
+    width: 143.67px;
+    height: 40px;
+    border: 1px solid #FFF;
+    background: transparent;
+    border-radius: 20px;
+}
+.overlay{
+    position: relative;
+    background: var(--linear-grad);
+    color: #FFF;
+    left: -150%;
+    height: 100%;
+    width: 250%;
+    transition: transform 0.6s ease-in-out;
+}
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 40px;
+  text-align: center;
+  height: 100%;
+  width: 340px;
+  transition: 0.6s ease-in-out;
+}
+
+.overlay-left {
+  right: 60%;
+  transform: translateX(-12%);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0%);
+}
+
+.overlay-panel h1 {
+  color: #FFF;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 25px 0px 35px;
+}
+
+.overlay-panel-button {
+  border: none;
+  background-color: transparent;
+}
+
+.right-panel-active .overlay-container {
+  transform: translateX(-150%);
+}
+
+.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.right-panel-active .overlay-left {
+  transform: translateX(25%);
+}
+
+.right-panel-active .overlay-right {
+  transform: translateX(35%);
+}
+
+.right-panel-active .sign-in-container {
+  transform: translateX(20%);
+  opacity: 0;
+}
+
+.right-panel-active .sign-up-container {
+  transform: translateX(66.7%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.6s;
+}
+@keyframes show {
+  0%, 50% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50.1%, 100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+.btnScaled {
+  animation: scaleBtn 0.6s;
+}
+
+@keyframes scaleBtn {
+  0% {
+    width: 143.67px;
+  }
+  50% {
+    width: 250px;
+  }
+  100% {
+    width: 143.67px;
+  }
+}
+ .container {
+    display: flex;
+    justify-content: center;
+    margin-left: 30px; /* Adjust the value to increase or decrease the left margin */
+  }
+
+  /* Apply styles to the cards */
+  .card {
+    flex: 1; /* Make the cards take up equal space within the container */
+    max-width: 300px; /* Set a maximum width for each card */
+    padding: 20px; /* Add padding to the cards */
+    margin: 10px; /* Add margin between the cards */
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+      /* Style for the modal */
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black with opacity */
+     justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+  }
+
+  /* Style for the text within the modal content */
+  .modal-content h2,
+  .modal-content p {
+    font-size: 24px; /* Increased font size for the heading */
+    color: #fff; /* Font color for better readability against dark background */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle text shadow for better contrast */
+    padding: 10px; /* Padding to separate the text from the border */
+    border-radius: 5px; /* Rounded corners for the text border */
+  }
+  /* Style for the modal content */
+  .modal-content {
+    background-image: url("images/img2.png"); /* Replace with the actual path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Background image remains fixed while pop-up scrolls */
+ display: flex; /* Use flexbox to center the content */
+    flex-direction: column; /* Align content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    /* Updated styles */
+    padding: 40px; /* Increased padding for more space around the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Slightly increased drop shadow */
+   position: absolute;
+    top: 50%; /* Position the pop-up 50% from the top */
+    left: 50%; /* Position the pop-up 50% from the left */
+    transform: translate(-50%, -50%); /* Center the pop-up using negative margins */
+}
+
+  /* Style for the close button */
+  .close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+  }
+
+  /* Style for the call-to-action button */
+  .subscribe-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6fae62;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .subscribe-button:hover {
+    background-color: #589e4e;
+  }

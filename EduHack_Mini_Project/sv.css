@@ -1,0 +1,148 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 9 Aug 2023, 5:10:24 pm
+    Author     : User
+*/
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Reset some default styles to ensure consistent behavior */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.logo img {
+  max-width: 100px;
+}
+main {
+  position: relative;
+}
+
+.logo img {
+  max-height: 50px; /* Adjust the height as needed */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 10px;
+      color: #fff;
+
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo img {
+    max-width: 40px; /* Adjust the logo size as needed */
+  vertical-align: middle; /* Align the logo vertically with text */
+}
+
+.footer-logo p {
+ font-size: 24px;
+  font-weight: bold;
+  margin-left: 10px;
+  vertical-align: middle; /* Align the text vertically with the logo */
+}
+.footer-links,
+.footer-social,
+.footer-newsletter {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a,
+.footer-social a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.footer-links a span,
+.footer-social a img {
+  margin-left: 5px;
+    font-size: 12px; /* Tiny icon size */
+}
+
+.footer-newsletter form {
+  display: flex;
+  align-items: center;
+}
+
+.footer-newsletter input[type="email"],
+.footer-newsletter button {
+  padding: 10px;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+
+.footer-newsletter button {
+  margin-left: 10px;
+}
+
+/* Responsiveness for the footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-logo p {
+    margin-left: 0;
+  }
+
+  .footer-links,
+  .footer-social,
+  .footer-newsletter {
+    margin-bottom: 20px;
+  }
+
+  .footer-links a,
+  .footer-social a {
+    margin-right: 0;  }
+
+  .footer-links a span,
+  .footer-social a img {
+    margin-left: 3px;
+  }
+
+  .footer-newsletter input[type="email"],
+  .footer-newsletter button {
+    padding: 8px;
+  }
+}
+/* Your existing CSS styles */
+/* ... */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}

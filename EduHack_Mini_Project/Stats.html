@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Carbon Footprint Charts</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link rel="stylesheet" href="stylesc.css">
+        <link rel="stylesheet" href="floatingButtonStyle.css">
+    <script src="floatingButtonScript.js"></script>
+        
+</head>
+    <body>
+          <header>
+    <div class="logo" id ="main">
+      <img src="images/icon.png" alt="Your Logo">
+          <p>CarbonAware</p>
+    </div>
+    <nav>
+      <ul>
+<li class="dropdown">
+      <a href="#">About</a>
+      <ul class="dropdown-menu">
+         <li><a href="what_we_do.html">What We Do</a></li>
+         <li><a href="partners.html">Partners</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </li>       <li><a href="newhtml.html">News</a></li>
+      <li><a href="readme.html">Read Me</a></li>
+        <li><a href="#" id="showChartsButton" >Dinesh</a></li>
+        <li><a href="#"  id="showdonateButton" class="action-button">Take Action</a></li>
+      </ul>
+    </nav>
+  </header>
+        
+        <div id="floating-button" class="floating-button" onclick="toggleChatPlatform()">
+        <img src="images/support.png" alt="Floating Button" class="floating-button-img" />
+    </div>
+
+    <!-- Mini Chat Platform -->
+    <div id="chat-platform" class="chat-platform">
+        <div class="chat-header">
+            <span class="chat-title">Support</span>
+        </div>
+        
+        <div id="chat-messages" class="chat-messages">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="message-input" placeholder="Type your message here...">
+            <button id="send-button" onclick="sendMessage()">
+                <img src="images/send.png" alt="Send Button" class="send-button-img" />
+            </button>
+        </div>
+    </div>
+    
+  <!-- Add canvas elements to render the charts -->
+  <div class="grid-container">
+      
+   <div class="grid-item">
+        <canvas id="homeChart"></canvas>
+        <span id="homeValue"></span>
+    </div>
+    <div class="grid-item">
+        <canvas id="foodChart"></canvas>
+        <span id="foodValue"></span>
+    </div>
+    <div class="grid-item">
+        <canvas id="travelChart"></canvas>
+        <span id="travelValue"></span>
+    </div>
+    <div class="grid-item">
+        <canvas id="totalChart"></canvas>
+        <span id="totalValue"></span>
+    </div>
+  </div>
+<!-- Chart.js library -->
+
+
+    <p id="home"></p>
+    
+    <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo" id="main">
+        <img src="images/icon.png" alt="Your Logo">
+        <p>CarbonAware</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">The Team <span>&rarr;</span></a>
+        <a href="#" id ="contact">Contact Us <span>&rarr;</span></a>
+      </div>
+      <div class="footer-social">
+        <!-- Replace the URLs and icons with appropriate ones -->
+        <a href="https://twitter.com/"><img src="images/twitter-icon.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/"><img src="images/instagram-icon.png" alt="Instagram"></a>
+        <a href="https://www.youtube.com/"><img src="images/youtube-icon.png" alt="YouTube"></a>
+        <a href="https://www.facebook.com/"><img src="images/facebook-icon.png" alt="Facebook"></a>
+      </div>
+      <div class="footer-newsletter">
+        <form>
+          <input type="email" placeholder="Your Email Address">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+    
+<div id="loginModal" class="modal">
+  <div class="login-modal-content">
+    <span class="close" onclick="closeLoginModal()">&times;</span>
+    <iframe id="loginIframe" src="login.html" width="900" height="650"></iframe>
+  </div>
+</div>
+<div id="donateModal" class="modal">
+  <div class="login-modal-content">
+    <span class="close" onclick="closedonateModal()">&times;</span>
+    <iframe id="donateIframe" src="donationindex.html" width="900" height="650"></iframe>
+  </div>
+</div>
+
+    <script src="chart.js"></script>
+
+<script>  // Get the modal element
+  var modal = document.getElementById("myModal");
+
+  // Get the <span> element that closes the modal
+  var closeBtn = document.getElementsByClassName("close")[0];
+ // Function to close the modal
+  function closeModal() {
+    modal.style.display = "none";
+  }
+  function setModalDisplayedCookie() {
+  document.cookie = "modalDisplayed=true; expires=; path=/";
+}
+  // Show the modal when the page loads
+  window.onload = function() {
+if (document.cookie.indexOf("modalDisplayed=true") < 0) {
+    modal.style.display = "block";
+    setModalDisplayedCookie();
+  }  };
+
+  // Close the modal when the close button is clicked
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  };
+
+  // Close the modal when the user clicks outside of it
+  window.onclick = function(event) {
+  if (modal.style.display === "block" && (event.target === modal || event.target.classList.contains("close"))) {
+      closeModal();
+  } // Close the modal when clicking outside the modal content    }
+  };
+      
+      
+ var loginModal = document.getElementById("loginModal");
+  var loginIframe = document.getElementById("loginIframe");
+  var showLoginButton = document.getElementById("showLoginButton");
+
+  function openLoginModal() {
+    loginModal.style.display = "block";
+  }
+
+  function closeLoginModal() {
+    loginModal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target === loginModal || event.target.classList.contains("close")) {
+      closeLoginModal();
+    }
+  };
+
+  showLoginButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    openLoginModal();
+  });
+      
+  var donateModal = document.getElementById("donateModal");
+  var donateIframe = document.getElementById("donateIframe");
+  var showdonateButton = document.getElementById("showdonateButton");
+  
+  function opendonateModal() {
+    donateModal.style.display = "block";
+  }
+
+  function closedonateModal() {
+    donateModal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target === donateModal || event.target.classList.contains("close")) {
+      closedonateModal();
+    }
+  };
+
+  showdonateButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    opendonateModal();
+  });
+
+    //  document.getElementById("subscribeBtn").addEventListener("click", subscribe);
+// Function to handle form submission
+ const emailInput = document.getElementById('email1');
+  const thankYouMessage = document.getElementById('thankYouMessage');
+
+  // Assuming you have a function to validate the email
+  function isValidEmail(email) {
+    // Add your email validation logic here
+    if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+    return true;
+  }
+
+  document.getElementById('subscribeBtn').addEventListener('click', function (e) {
+    e.preventDefault();
+    if (isValidEmail(emailInput.value)) {
+        emailInput.value = ''; // Clear the input
+      thankYouMessage.classList.remove('hidden'); // Show the thank you message
+      setTimeout(function () {
+        thankYouMessage.classList.add('hidden'); // Hide the thank you message after a few seconds
+      }, 3000); // Adjust the time as needed (3000ms = 3 seconds)
+    }
+  });
+  
+function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+// ... your previous code ...
+
+// Function to handle subscription in the modal
+function subscribe() {
+  var emailInput = document.getElementById("email");
+  var modalThankYouMessage = document.getElementById("modalThankYouMessage");
+
+  if (isValidEmail(emailInput.value)) {
+    emailInput.value = ''; // Clear the input
+    modalThankYouMessage.classList.remove('hidden'); // Show the thank you message
+    setTimeout(function () {
+      modalThankYouMessage.classList.add('hidden'); // Hide the thank you message after a few seconds
+    }, 3000); // Adjust the time as needed (3000ms = 3 seconds)
+  }
+}
+
+// ... your previous code ...
+
+//function subscribehardcode1() {
+  // Get the email input element
+ // var emailInput = document.getElementById("email1");
+
+  // Get the value of the email entered by the user
+  //email = emailInput.value;
+
+  // Validate the email address
+ // if (validateEmail(email)) {
+    // Email is valid, proceed with subscription (you can add your subscription logic here)
+    //saveRecord(email);
+   //      alert("Thank you for subscribing!");
+
+     //   } else {
+    // Email is not valid, show an error message
+   // alert("Please enter a valid email address.");
+  //}
+//}/
+document.getElementById("showChartsButton").addEventListener("click", function() {
+    window.location.href = "Stats.html";
+});
+
+document.getElementById("main").addEventListener("click", function() {
+    window.location.href = "mainpage.html";
+});
+
+document.getElementById("contact").addEventListener("click", function() {
+    window.location.href = "contact.html";
+});
+
+      
+</script>
+
+    </body>
+</html>

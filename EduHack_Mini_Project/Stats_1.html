@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Carbon Footprint Charts</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link rel="stylesheet" href="stylesc.css">
+        
+</head>
+    <body>
+          <header>
+    <div class="logo" id ="main">
+      <img src="images/icon.png" alt="Your Logo">
+          <p>CarbonAware</p>
+    </div>
+    <nav>
+      <ul>
+<li class="dropdown">
+      <a href="#">About</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">What We Do</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Partners</a></li>
+        <li><a href="#" id ="contact">Contact</a></li>
+      </ul>
+    </li>        <li><a href="#">News</a></li>
+        <li><a href="#">Read Me</a></li>
+        <li><a href="#" id="showChartsButton" >Login</a></li>
+        <li><a href="#" class="action-button">Take Action</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Add canvas elements to render the charts -->
+  <div class="grid-container">
+      
+   <div class="grid-item">
+        <canvas id="homeChart"></canvas>
+        <span id="homeValue"></span>
+    </div>
+    <div class="grid-item">
+        <canvas id="foodChart"></canvas>
+        <span id="foodValue"></span>
+    </div>
+    <div class="grid-item">
+        <canvas id="travelChart"></canvas>
+        <span id="travelValue"></span>
+    </div>
+    <div class="grid-item">
+        <canvas id="totalChart"></canvas>
+        <span id="totalValue"></span>
+    </div>
+  </div>
+<!-- Chart.js library -->
+
+
+    <p id="home"></p>
+    
+    <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo" id="main">
+        <img src="images/icon.png" alt="Your Logo">
+        <p>CarbonAware</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">The Team <span>&rarr;</span></a>
+        <a href="#" id ="contact">Contact Us <span>&rarr;</span></a>
+      </div>
+      <div class="footer-social">
+        <!-- Replace the URLs and icons with appropriate ones -->
+        <a href="https://twitter.com/"><img src="images/twitter-icon.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/"><img src="images/instagram-icon.png" alt="Instagram"></a>
+        <a href="https://www.youtube.com/"><img src="images/youtube-icon.png" alt="YouTube"></a>
+        <a href="https://www.facebook.com/"><img src="images/facebook-icon.png" alt="Facebook"></a>
+      </div>
+      <div class="footer-newsletter">
+        <form>
+          <input type="email" placeholder="Your Email Address">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+    <script src="chart.js"></script>
+    <script>
+ // Function to open charts page in a new window
+        document.getElementById("showChartsButton").addEventListener("click", function() {
+            window.location.href= "Stats.html";
+        });  // Function to open charts page in a new window
+       
+    document.getElementById("main").addEventListener("click", function() {
+            window.location.href= "header.html";
+        });document.getElementById("contact").addEventListener("click", function() {
+            window.location.href= "contact.html";
+        });
+            </script>
+
+    </body>
+</html>

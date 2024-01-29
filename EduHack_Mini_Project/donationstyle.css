@@ -1,0 +1,97 @@
+/* Updated CSS Code */
+
+.container {
+    max-width: 1000px;    justify-content: center;
+    align-items: center;    min-height: 100vh;
+ font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+}
+
+.container .content {
+    display: flex;
+    justify-content: space-between; /* Change to space-between to add space between left and right sections */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container  .left-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #457067;
+    color: #fff;
+    border-radius: 5px; /* Add border radius for better appearance */
+}
+
+.container .left-section h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.container .right-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.container h2 {
+    text-align: center;
+    color: #333;
+}
+
+.container .donation-form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.container label {
+    display: block;
+    font-size: 18px; /* Increase font size of the label */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.container input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.container #paypal-button-container {
+    text-align: center;
+}
+
+/* PayPal button style (You can customize this as needed) */
+.container .paypal-button {
+    color: #fff;
+    background-color: #457067;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px; /* Make the button rounded */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container .paypal-button:hover {
+    background-color: #35504a;
+}
+
+/* Add floating class for the donation form */
+.container .donation-form.floating {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+
+

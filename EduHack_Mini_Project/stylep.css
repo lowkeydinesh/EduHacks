@@ -1,0 +1,227 @@
+
+
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 2 Aug 2023, 3:41:37 pm
+    Author     : User
+*/
+
+header {
+  background-color: #004d32; /* Dark green background for the header */
+  color: #fff;
+  padding: 20px;
+}
+/* Styles for the header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+    background-color: #004d32; /* Dark greenish background color */
+
+}
+.logo69 img {
+  max-width: 100px;
+}
+
+.logo69 {
+  display: flex;
+  align-items: center;
+}
+
+.logo69 p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 10px;
+      color: #fff;
+
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  
+}
+
+nav ul li {
+  margin-left: 20px;
+  
+}
+
+nav ul li a:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333; /* Adjust the color as needed */
+  padding: 5px 10px;
+  border: 1px solid transparent;
+    color: #fff;
+
+}
+.dropdown69 {
+  position: relative;
+}
+
+.dropdown-menu69 {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+/* Show the dropdown menu when hovering over the "About" link */
+.dropdown69:hover .dropdown-menu69 {
+  display: block;
+}
+/* Optional: Style the dropdown menu links */
+.dropdown-menu69 li {
+  background-color: #fff;
+  padding: 8px;
+}
+
+.dropdown-menu69 li a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Optional: Style the dropdown menu links on hover/focus */
+.dropdown-menu69 li a:hover,
+.dropdown-menu69 li a:focus {
+  background-color: #f0f0f0;
+}
+
+/* Ensure all dropdown items align with the "About" link */
+.dropdown-menu69 li {
+  left: 0;
+  width: 100%;
+}
+ /* Style for the modal content */
+  .modal-content {
+    background-image: url("images/img2.png"); /* Replace with the actual path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Background image remains fixed while pop-up scrolls */
+ display: flex; /* Use flexbox to center the content */
+    flex-direction: column; /* Align content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    /* Updated styles */
+    padding: 40px; /* Increased padding for more space around the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Slightly increased drop shadow */
+   position: absolute;
+    top: 50%; /* Position the pop-up 50% from the top */
+    left: 50%; /* Position the pop-up 50% from the left */
+    transform: translate(-50%, -50%); /* Center the pop-up using negative margins */
+}
+
+  /* Style for the close button */
+  .close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+  }
+
+  /* Style for the call-to-action button */
+  .subscribe-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6fae62;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .subscribe-button:hover {
+    background-color: #589e4e;
+  }
+      /* Style for the modal */
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black with opacity */
+     justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+  }
+
+  /* Style for the text within the modal content */
+  .modal-content h2,
+  .modal-content p {
+    font-size: 24px; /* Increased font size for the heading */
+    color: #fff; /* Font color for better readability against dark background */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle text shadow for better contrast */
+    padding: 10px; /* Padding to separate the text from the border */
+    border-radius: 5px; /* Rounded corners for the text border */
+  }
+  .action-button:hover {
+  background-color: #ccc; /* Lighter shade of muted orange on hover */
+}
+
+
+/* Container styles */
+.container {
+  width: 1400px;
+  height: 500px;
+  perspective: 800px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  margin-right: 20px;
+  transition: transform 1500ms;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.back {
+  background-color: #6fae62; /* Green background color */
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Adjust the image size and position */
+.card .front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+

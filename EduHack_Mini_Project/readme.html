@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarbonAware | Your Carbon Footprint Guide</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="stylep.css"> <!-- Your custom CSS -->
+    <link rel="stylesheet" href="floatingButtonStyle.css">
+    <script src="floatingButtonScript.js"></script>
+    <!-- Your additional CSS imports if any -->
+    <style>
+         .accordion{
+            width:1400px;
+        }
+        .accordion li{
+            list-style: none;
+            width: 100%;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            background: #B4E8C4;
+            box-shadow: 6px 6px 10px -1px rgba(0, 0, 0.15),
+                        -6px -6px 10px -1px rgba(255, 255, 255.7);
+        }
+        .accordion li label{
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        label::before{
+            content: '+';
+            margin-right: 10px;
+            font-size: 24px;
+            font-weight: 600;
+            
+        
+        }
+        
+        input[type="radio"]{
+            display: none;
+        }
+        
+        .accordion .content{
+            color: #555;
+            padding: 0 10px;
+            line-height: 26px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s, padding 0.5s;
+        }
+        
+        .accordion input[type="radio"]:checked + label + .content{
+            max-height: 400px;
+            padding: 10px 10px 20px;
+        }
+        
+        .accordion input[type="radio"]:checked + label::before{
+            content: '-';
+        }
+        .video-section{
+            margin-top: 150px;
+        }
+        .blockquote{
+            background-color: #B4E8C4;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            width:1400px;
+        }
+        .testimonials h2{
+            margin-top: 20px;
+        }
+        .video-section h2{
+            text-align: center;
+        }
+       /* Style for the modal */
+
+.login-modal-content {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.donate-modal-content {
+    
+}
+
+  /* Style for the close button */
+  .close {
+    width: 450px; /* Adjust the width as needed */
+    margin: 0 auto; /* This centers the element horizontally */
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+  }
+  
+   .close {
+    width: 450px; /* Adjust the width as needed */
+    margin: 0 auto; /* This centers the element horizontally */
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+  }
+  
+
+  /* Style for the call-to-action button */
+  .subscribe-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6fae62;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .subscribe-button:hover {
+    background-color: #589e4e;
+  }
+   #loginIframe {
+        border-radius: 14px; /* Adjust the value as needed */
+    }
+
+    </style>
+</head>
+<body>
+    
+<header class="header">
+    <div class="logo69">
+      <img src="images/icon.png" alt="Your Logo">
+      <p>CarbonAware</p>
+    </div>
+    <nav>
+      <ul>
+        <li class="dropdown69">
+          <a href="#">About</a>
+          <ul class="dropdown-menu69">
+            <li><a href="what_we_do.html">What We Do</a></li>
+         <li><a href="partners.html">Partners</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+      <li><a href="newhtml.html">News</a></li>
+      <li><a href="readme.html">Read Me</a></li>
+<!-- Change the link to a button or span element -->
+<li><button id="showLoginButton">Login</button></li>
+        
+        <li><a href="#"  id="showdonateButton" class="action-button">Take Action</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section class="py-12">
+    <div class="container mx-auto">
+         <ul class="accordion">
+            <li>
+                <input type="radio" name="accordion" id="item1">
+                <label for="item1">Sustainability Initiatives</label>
+                <div class="content">
+                    <p>Learn about our ongoing sustainability initiatives aimed at reducing carbon emissions and promoting eco-friendly practices.</p>
+                    <p>Our initiatives include community clean-up events, tree planting campaigns, and partnerships with local organizations.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="item2">
+                <label for="item2">Carbon Reduction Tips</label>
+                <div class="content">
+                    <p>Discover practical tips and strategies to lower your carbon footprint in your daily life.</p>
+                    <ul>
+                        <li>Reduce energy consumption by using energy-efficient appliances.</li>
+                        <li>Opt for sustainable transportation options such as biking or carpooling.</li>
+                        <li>Choose reusable products over single-use plastics.</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="item3">
+                <label for="item3">Carbon Calculator</label>
+                <div class="content">
+                    <p>Use our user-friendly carbon calculator to estimate your personal carbon footprint based on your lifestyle and habits.</p>
+                    <p>Gain insights into the major contributors to your carbon emissions and receive personalized recommendations for reducing them.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="item4">
+                <label for="item4">Environmental Impact</label>
+                <div class="content">
+                    <p>Explore the significant impact of carbon emissions on our environment and climate.</p>
+                    <p>Learn about the connection between carbon emissions, global warming, rising sea levels, and their effects on ecosystems and wildlife.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="video-section">
+    <div>
+        <h2 class="text-3xl font-semibold mb-4">Watch Our Video</h2>
+        <video id="backgroundVideo" autoplay loop muted playsinline>
+            <source src="images/about.mp4" type="video/mp4">
+            
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+<div id="floating-button" class="floating-button" onclick="toggleChatPlatform()">
+        <img src="images/support.png" alt="Floating Button" class="floating-button-img" />
+    </div>
+
+    <!-- Mini Chat Platform -->
+    <div id="chat-platform" class="chat-platform">
+        <div class="chat-header">
+            <span class="chat-title">Support</span>
+        </div>
+        
+        <div id="chat-messages" class="chat-messages">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="message-input" placeholder="Type your message here...">
+            <button id="send-button" onclick="sendMessage()">
+                <img src="images/send.png" alt="Send Button" class="send-button-img" />
+            </button>
+        </div>
+    </div>
+
+
+<section class="testimonials">
+    <div class="container mx-auto text-center">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <h2 class="text-3xl font-semibold mb-4">What Our Users Say</h2>
+                    <blockquote class="blockquote p-4 rounded shadow">
+                        "CarbonAware has transformed the way I approach my daily life. The insights and tips provided have empowered me to make conscious choices that benefit the environment."
+                        <cite class="block mt-2 font-semibold">Emily D.</cite>
+                    </blockquote>
+                    <blockquote class="blockquote p-4 rounded shadow">
+                        "I'm so glad I found CarbonAware. It's an incredible resource that has helped me understand the impact of my actions on the planet. The carbon calculator is a game-changer!"
+                        <cite class="block mt-2 font-semibold">Alex W.</cite>
+                    </blockquote>
+                    <blockquote class="blockquote p-4 rounded shadow">
+                        "As a teacher, I'm always looking for ways to educate my students about the environment. CarbonAware's educational content and tips have made it easier than ever!"
+                        <cite class="block mt-2 font-semibold">Sarah L.</cite>
+                    </blockquote>
+                    <!-- Add more testimonials as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+<footer class="footer bg-green-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between">
+          <div class="flex items-center">
+      <img src="images/icon.png" alt="Your Logo" class="max-w-12">
+      <p class="text-xl font-bold ml-3">CarbonAware</p>
+    </div>
+    <div class="flex items-center my-2 sm:my-0">
+      <a href="#" class="text-white mr-4">The Team <span>&rarr;</span></a>
+      <a href="#" id="contact" class="text-white">Contact Us <span>&rarr;</span></a>
+    </div>
+    <div class="flex items-center my-2 sm:my-0">
+      <!-- Replace the URLs and icons with appropriate ones -->
+      <a href="https://twitter.com/" class="mr-4"><img src="images/twitter-icon.png" alt="Twitter" class="w-6 h-6"></a>
+      <a href="https://www.instagram.com/" class="mr-4"><img src="images/what_we_do.png" alt="Instagram" class="w-6 h-6"></a>
+      <a href="https://www.youtube.com/" class="mr-4"><img src="images/youtube-icon.png" alt="YouTube" class="w-6 h-6"></a>
+      <a href="https://www.facebook.com/"><img src="images/facebook-icon.png" alt="Facebook" class="w-6 h-6"></a>
+    </div>
+ <div class="flex items-center my-2 sm:my-0">
+      <form class="flex">
+        <input type="email" id="email1" placeholder="Your Email Address" class="px-4 py-2 rounded-l-md border border-r-0 border-white focus:outline-none focus:ring focus:border-blue-300 text-black">
+        <button type="submit" id="subscribeBtn" class="px-4 py-2 rounded-r-md bg-white text-black font-bold">Subscribe</button>
+      </form>
+    </div>
+    </div>
+</footer>
+<div id="loginModal" class="modal">
+  <div class="login-modal-content">
+    <span class="close" onclick="closeLoginModal()">&times;</span>
+    <iframe id="loginIframe" src="login.html" width="850" height="500"></iframe>
+  </div>
+</div>
+<div id="donateModal" class="modal">
+  <div class="login-modal-content">
+    <span class="close" onclick="closedonateModal()">&times;</span>
+    <iframe id="donateIframe" src="donationindex.html" width="900" height="650"></iframe>
+  </div>
+</div>
+
+<!-- Your scripts here -->
+<script src="subscribe.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>  
+
+ var loginModal = document.getElementById("loginModal");
+  var loginIframe = document.getElementById("loginIframe");
+  var showLoginButton = document.getElementById("showLoginButton");
+
+  function openLoginModal() {
+    loginModal.style.display = "block";
+  }
+
+  function closeLoginModal() {
+    loginModal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target === loginModal || event.target.classList.contains("close")) {
+      closeLoginModal();
+    }
+  };
+
+  showLoginButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    openLoginModal();
+  });
+      
+  var donateModal = document.getElementById("donateModal");
+  var donateIframe = document.getElementById("donateIframe");
+  var showdonateButton = document.getElementById("showdonateButton");
+  
+  function opendonateModal() {
+    donateModal.style.display = "block";
+  }
+
+  function closedonateModal() {
+    donateModal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target === donateModal || event.target.classList.contains("close")) {
+      closedonateModal();
+    }
+  };
+
+  showdonateButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    opendonateModal();
+  });
+    
+  const aboutLink = document.querySelector('.dropdown > a');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  aboutLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    dropdownMenu.classList.toggle('show');
+  });
+
+  // Close the dropdown when clicking outside
+  window.addEventListener('click', function (event) {
+    if (!aboutLink.contains(event.target)) {
+      dropdownMenu.classList.remove('show');
+    }
+  });
+        
+        
+      
+      document.getElementById("subscribeBtn").addEventListener("click", subscribe1);
+// Function to handle form submission
+function subscribe1() {
+  // Get the email input element
+  var emailInput = document.getElementById("email1");
+
+  // Get the value of the email entered by the user
+  email = emailInput.value;
+
+  // Validate the email address
+  if (validateEmail(email)) {
+    // Email is valid, proceed with subscription (you can add your subscription logic here)
+    saveRecord(email);
+  } else {
+    // Email is not valid, show an error message
+    alert("Please enter a valid email address.");
+  }
+}
+
+
+</script>
+</body>
+</html>

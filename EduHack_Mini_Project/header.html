@@ -1,0 +1,345 @@
+<html>
+<head>
+  <title>CarbonAware</title>
+  <link rel="stylesheet" type="text/css" href="stylesc.css">
+  
+  <!-- Add this script tag inside the <head> tag of your HTML -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+
+  <style>
+    /* Style for the modal */
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black with opacity */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+  }
+
+  /* Style for the text within the modal content */
+  .modal-content h2,
+  .modal-content p {
+    font-size: 24px; /* Increased font size for the heading */
+    color: #fff; /* Font color for better readability against dark background */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle text shadow for better contrast */
+    padding: 10px; /* Padding to separate the text from the border */
+    border-radius: 5px; /* Rounded corners for the text border */
+  }
+  /* Style for the modal content */
+  .modal-content {
+    background-image: url("images/img2.png"); /* Replace with the actual path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Background image remains fixed while pop-up scrolls */
+ display: flex; /* Use flexbox to center the content */
+    flex-direction: column; /* Align content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    /* Updated styles */
+    padding: 40px; /* Increased padding for more space around the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Slightly increased drop shadow */
+   position: absolute;
+    top: 50%; /* Position the pop-up 50% from the top */
+    left: 50%; /* Position the pop-up 50% from the left */
+    transform: translate(-50%, -50%); /* Center the pop-up using negative margins */
+}
+/* Style for the login modal content */
+/* Style for the login modal content */
+.login-modal-content {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+  /* Style for the close button */
+  .close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+  }
+
+  /* Style for the call-to-action button */
+  .subscribe-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6fae62;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .subscribe-button:hover {
+    background-color: #589e4e;
+  }
+
+    /* Add any other custom styles for the modal here */
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo" id = "main">
+      <img src="images/icon.png" alt="Your Logo">
+          <p>CarbonAware</p>
+    </div>
+    <nav>
+      <ul>
+<li class="dropdown">
+      <a href="#">About</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">What We Do</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Partners</a></li>
+        <li><a href="contact.html" >Contact</a></li>
+      </ul>
+    </li>        <li><a href="newhtml.html">News</a></li>
+        <li><a href="#">Read Me</a></li>
+<!-- Change the link to a button or span element -->
+<li><button id="showLoginButton">Login</button></li>
+
+        
+        <li><a href="#" class="action-button">Take Action</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Add the slideshow section below this -->
+  <div class="slideshow-wrapper">
+  <div class="slideshow">
+    <!-- Your slideshow content goes here -->
+    <img src="images/img1.png" alt="Image 1" class="slideshow-image" >
+  <img src="images/img2.png" alt="Image 2" class="slideshow-image" >
+  <img src="images/img3.png" alt="Image 3" class="slideshow-image">
+  <img src="images/img4.png" alt="Image 3" class="slideshow-image">
+  <img src="images/img5.png" alt="Image 3" class="slideshow-image">
+  </div>  
+    <!-- Text and button overlay -->
+    <div class="text-overlay">
+      <h2>Sustainability</h2>
+      <h1>Starts With You</h1>
+      <a href="#" class="learn-more-button" id="learn-more-button">Learn More</a>
+    </div>
+  </div>
+<!-- Text container with relevant information -->
+<div class="info-container" id="info-container">
+  <h2>Welcome to Our Website</h2>
+  <p>
+    At our website, we are committed to helping you reduce your carbon footprint.
+    Explore our resources to compare your carbon footprint and make positive changes.
+    Update your carbon footprint on the go and join us in creating a greener future.
+  </p>
+</div>
+    <!-- Video section -->
+     <video id="backgroundVideo" autoplay loop muted playsinline>
+      <source src="images/video.mp4" type="video/mp4">
+      <!-- Add additional video formats here if needed (e.g., WebM, Ogg) -->
+      Your browser does not support the video tag.
+    </video>
+
+<!-- ... your previous code ... -->
+<div class="container1">
+  <h2 class="text-center text-3xl font-bold mt-8 mb-12">This is how it works</h2>
+  <div class="flex justify-center mx-4"> <!-- Added mx-4 to create left and right margin -->
+    <div class="w-full sm:w-auto flex-1 p-4">
+      <div class="h-full bg-white border border-gray-300 rounded-lg shadow">
+        <img class="-mt-24 mx-auto" alt="" src="images/describe_lifestyle-385dd75982dac26387e73e46efa78b92.png">
+        <h3 class="text-lg font-semibold my-2 text-center">1. Calculate your footprint</h3>
+        <p class="text-center">Our easy test takes just a minute to complete.</p>
+      </div>
+    </div>
+  <div class="w-full sm:w-auto flex-1 p-4">
+      <div class="h-full bg-white border border-gray-300 rounded-lg shadow">
+        <img class="-mt-24 mx-auto" alt="" src="images/sign_up-3837c35bb84703b35aa4e662b8cd2506.png">
+        <h3 class="text-lg font-semibold my-2 text-center">2. Sign up</h3>
+        <p class="text-center">Sign up and learn how to reduce your personal footprint.</p>
+      </div>
+    </div>
+   <div class="w-full sm:w-auto flex-1 p-4">
+      <div class="h-full bg-white border border-gray-300 rounded-lg shadow">
+        <img class="-mt-24 mx-auto" alt="" src="images/save_the_planet-a21e5e4055dd426ab27b6a3ea2e2aade.png">
+        <h3 class="text-lg font-semibold my-2 text-center">3. Save our planet</h3>
+        <p class="text-center">Together we finance projects that reduce the amount of CO2 in the atmosphere - join us!</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Block for 'Our Organization' -->
+<div class="block-container bg-gray-100 py-8">
+  <div class="block-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between">
+    <div class="block-image w-full sm:w-1/2">
+      <img src="images/our_organization_image.jpg" alt="Our Organization Image" class="w-full h-auto rounded-lg">
+    </div>
+    <div class="block-text w-full sm:w-1/2 mt-4 sm:mt-0">
+      <h2 class="text-3xl font-bold">Our Organization</h2>
+      <p class="mt-4">Find out about our mission, methods, and the result of our efforts.</p>
+      <a href="what_we_do.html" class="action-button mt-4">Learn More</a>
+    </div>
+  </div>
+</div>
+
+<!-- Block for 'Take Action' -->
+<div class="block-container bg-white py-8">
+  <div class="block-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between">
+    <div class="block-text w-full sm:w-1/2 mt-4 sm:mt-0 order-2 sm:order-1">
+      <h2 class="text-3xl font-bold">Take Action</h2>
+      <p class="mt-4">Ready to take the next step? You can become a contributor to our cause or participate yourself.</p>
+      <a href="take_action.html" class="action-button mt-4">Find Out How</a>
+    </div>
+    <div class="block-image w-full sm:w-1/2 order-1 sm:order-2">
+      <img src="images/take_action_image.jpg" alt="Take Action Image" class="w-full h-auto rounded-lg">
+    </div>
+  </div>
+</div>
+
+<!-- ... your previous code ... -->
+
+<footer class="footer bg-green-900 text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between">
+    <div class="flex items-center">
+      <img src="images/icon.png" alt="Your Logo" class="max-w-12">
+      <p class="text-xl font-bold ml-3">CarbonAware</p>
+    </div>
+    <div class="flex items-center my-2 sm:my-0">
+      <a href="#" class="text-white mr-4">The Team <span>&rarr;</span></a>
+      <a href="#" id="contact" class="text-white">Contact Us <span>&rarr;</span></a>
+    </div>
+    <div class="flex items-center my-2 sm:my-0">
+      <!-- Replace the URLs and icons with appropriate ones -->
+      <a href="https://twitter.com/" class="mr-4"><img src="images/twitter-icon.png" alt="Twitter" class="w-6 h-6"></a>
+      <a href="https://www.instagram.com/" class="mr-4"><img src="images/instagram-icon.png" alt="Instagram" class="w-6 h-6"></a>
+      <a href="https://www.youtube.com/" class="mr-4"><img src="images/youtube-icon.png" alt="YouTube" class="w-6 h-6"></a>
+      <a href="https://www.facebook.com/"><img src="images/facebook-icon.png" alt="Facebook" class="w-6 h-6"></a>
+    </div>
+ <div class="flex items-center my-2 sm:my-0">
+      <form class="flex">
+        <input type="email" id="email1" placeholder="Your Email Address" class="px-4 py-2 rounded-l-md border border-r-0 border-white focus:outline-none focus:ring focus:border-blue-300 text-black">
+        <button type="submit" id="subscribeBtn" class="px-4 py-2 rounded-r-md bg-white text-black font-bold">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</footer>
+
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <!-- Add welcoming images or video here -->
+    <h2>Welcome to Our Newsletter</h2>
+    <p>
+      Stay informed about the latest eco-friendly trends and receive exclusive offers
+      from CarbonAware.
+    </p>
+    <form>
+      <input type="email" id ="email" placeholder="Your Email Address">
+      <a href="#"  id="subscribeButton" class="subscribe-button" onclick="subscribe()">Subscribe</a>
+    </form>
+  </div>
+</div>
+
+<div id="loginModal" class="modal">
+  <div class="login-modal-content">
+    <span class="close" onclick="closeLoginModal()">&times;</span>
+    <iframe id="loginIframe" src="login.html" width="900" height="650"></iframe>
+  </div>
+</div>
+
+
+
+
+<!-- Add this script tag at the end of your <body> tag -->
+  <script src="slideshow.js"></script>
+  <script src="subscribe.js"></script>
+  <!-- Rest of your website content goes here -->
+<script>  // Get the modal element
+    
+    
+  var modal = document.getElementById("myModal");
+
+  // Get the <span> element that closes the modal
+  var closeBtn = document.getElementsByClassName("close")[0];
+ // Function to close the modal
+  function closeModal() {
+    modal.style.display = "none";
+  }
+  // Show the modal when the page loads
+  window.onload = function() {
+    modal.style.display = "block";
+  };
+
+  // Close the modal when the close button is clicked
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  };
+
+  // Close the modal when the user clicks outside of it
+  window.onclick = function(event) {
+    if (event.target === modal || event.target.classList.contains("close")) {
+        modal.style.display = "none";
+    }
+  };
+  
+ var loginModal = document.getElementById("loginModal");
+  var loginIframe = document.getElementById("loginIframe");
+  var showLoginButton = document.getElementById("showLoginButton");
+
+  function openLoginModal() {
+    loginModal.style.display = "block";
+  }
+
+  function closeLoginModal() {
+    loginModal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target === loginModal || event.target.classList.contains("close")) {
+      closeLoginModal();
+    }
+  };
+
+  showLoginButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    openLoginModal();
+  });
+      
+      
+      
+      document.getElementById("subscribeBtn").addEventListener("click", subscribe1);
+// Function to handle form submission
+function subscribe1() {
+  // Get the email input element
+  var emailInput = document.getElementById("email1");
+
+  // Get the value of the email entered by the user
+  email = emailInput.value;
+
+  // Validate the email address
+  if (validateEmail(email)) {
+    // Email is valid, proceed with subscription (you can add your subscription logic here)
+    saveRecord(email);
+  } else {
+    // Email is not valid, show an error message
+    alert("Please enter a valid email address.");
+  }
+}
+
+      
+</script>
+
+</body>
+</html>

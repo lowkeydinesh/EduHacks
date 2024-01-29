@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarbonAware | Your Carbon Footprint Guide</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="stylep.css"> <!-- Your custom CSS -->
+    <link rel="stylesheet" href="floatingButtonStyle.css">
+    <script src="floatingButtonScript.js"></script>
+
+    <!-- Your additional CSS imports if any -->
+
+    <style>
+ 
+.login-modal-content {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.donate-modal-content {
+    
+}
+
+  /* Style for the close button */
+  .close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+  }
+  #loginIframe {
+        border-radius: 14px; /* Adjust the value as needed */
+    }
+
+    </style>
+</head>
+<body>
+    
+ <header>
+    <div class="logo69" id = "main">
+      <img src="images/icon.png" alt="Your Logo">
+          <p>CarbonAware</p>
+    </div>
+    <nav>
+      <ul>
+<li class="dropdown69">
+      <a href="#">About</a>
+      <ul class="dropdown-menu69">
+        <li><a href="what_we_do.html">What We Do</a></li>
+         <li><a href="partners.html">Partners</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+      <li><a href="newhtml.html">News</a></li>
+      <li><a href="readme.html">Read Me</a></li>
+<!-- Change the link to a button or span element -->
+<li><button id="showLoginButton">Login</button></li>
+        
+        <li><a href="#"  id="showdonateButton" class="action-button">Take Action</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- My Team Section -->
+  <section class="my-8">
+    <h1 class="text-center text-4xl font-semibold">My Team</h1>
+    <div class="container mx-auto mt-8 flex space-x-4">
+      <!-- Card 1 -->
+    <div class="card">
+      <div class="front">
+        <img src="images/dinesh.jpg" alt="Dinesh" class="card-image">
+      </div>
+      <div class="back">
+        <h1>Dinesh</h1>
+        <p>Login/Register UI(Modal) and Database<br>Partners Page UI<br>Read Me Page UI<br>Contact Page UI that sends data to Formspree</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="front">
+        <img src="images/ramesh.jpg" alt="Ramesh" class="card-image">
+      </div>
+      <div class="back">
+        <h1>Ramesh</h1>
+        <p>Additional info on the back of card 2</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="front">
+        <img src="images/yenkai.jpg" alt="Yen Kai" class="card-image">
+      </div>
+      <div class="back">
+        <h1>Yen Kai</h1>
+        <p>Designed the styles and animations of the floating button feature and reply page<br><br>
+           Implemented a live chat function between users and admins for real time communication using DataStax<br><br>
+           Integrated Floating button feature with every page on the website
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <div class="front">
+        <img src="images/eonghow.jpg" alt="Eong How" class="card-image">
+      </div>
+      <div class="back">
+        <h1>Eong How</h1>
+        <p>Paypal sandbox Account<br><br>
+        Paypal Checkout integration in javascript<br><br>
+        UI design for Donation page</p>
+      </div>
+    </div>
+    </div>
+  </section>
+  
+  <div id="floating-button" class="floating-button" onclick="toggleChatPlatform()">
+        <img src="images/support.png" alt="Floating Button" class="floating-button-img" />
+    </div>
+
+    <!-- Mini Chat Platform -->
+    <div id="chat-platform" class="chat-platform">
+        <div class="chat-header">
+            <span class="chat-title">Support</span>
+        </div>
+        
+        <div id="chat-messages" class="chat-messages">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="message-input" placeholder="Type your message here...">
+            <button id="send-button" onclick="sendMessage()">
+                <img src="images/send.png" alt="Send Button" class="send-button-img" />
+            </button>
+        </div>
+    </div>
+
+<section class="description bg-gray-100 py-12">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-semibold mb-4 mx-auto">Explore CarbonAware: Your Carbon Footprint Guide</h2>
+        <div class="text-left">
+            <p class="text-gray-700 mb-8">
+                Welcome to CarbonAware, your comprehensive resource for understanding and reducing your carbon footprint...
+            </p>
+            <h3 class="text-lg font-semibold mb-2">What You'll Find:</h3>
+            <ul class="list-disc list-inside mb-4">
+                <li>Learn about carbon footprints and their significance in the context of our planet's health.</li>
+                <li>Calculate your personal carbon footprint using our intuitive calculator tool.</li>
+                <li>Discover practical tips and insights on how to minimize your carbon emissions in daily life.</li>
+                <li>Stay informed about the latest environmental news and initiatives.</li>
+            </ul>
+            <p class="mt-4">
+                CarbonAware is your ally in making informed decisions that positively influence our environment. Whether you're an individual seeking to lessen your impact or an advocate for change, our platform equips you with the tools to be a part of the solution.
+                Join us in creating a more sustainable and eco-friendly world.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+
+  <!-- Footer Section -->
+<footer class="footer bg-green-900 text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between">
+    <div class="flex items-center">
+      <img src="images/icon.png" alt="Your Logo" class="max-w-12">
+      <p class="text-xl font-bold ml-3">CarbonAware</p>
+    </div>
+    <div class="flex items-center my-2 sm:my-0">
+      <a href="partners.html" class="text-white mr-4">The Team <span>&rarr;</span></a>
+      <a href="contact.html" id="contact" class="text-white">Contact Us <span>&rarr;</span></a>
+    </div>
+    <div class="flex items-center my-2 sm:my-0">
+      <!-- Replace the URLs and icons with appropriate ones -->
+      <a href="https://twitter.com/" class="mr-4"><img src="images/twitter-icon.png" alt="Twitter" class="w-6 h-6"></a>
+      <a href="https://www.instagram.com/" class="mr-4"><img src="images/instagram-icon.png" alt="Instagram" class="w-6 h-6"></a>
+      <a href="https://www.youtube.com/" class="mr-4"><img src="images/youtube-icon.png" alt="YouTube" class="w-6 h-6"></a>
+      <a href="https://www.facebook.com/"><img src="images/facebook-icon.png" alt="Facebook" class="w-6 h-6"></a>
+ </div>
+    <div class="flex items-center my-2 sm:my-0">
+      <form class="flex">
+        <input type="email" id="email1" placeholder="Your Email Address" class="px-4 py-2 rounded-l-md border border-r-0 border-white focus:outline-none focus:ring focus:border-blue-300 text-black">
+        <button type="submit" id="subscribeBtn" class="px-4 py-2 rounded-r-md bg-white text-black font-bold">Subscribe</button>
+      </form>
+      <p id="thankYouMessage" class="ml-2 text-sm text-green-500 hidden">Thank you for subscribing!</p>
+    </div>
+  </div>
+  <p class="text-center">&copy; 2023 Our Organization. All rights reserved.</p>
+</footer>
+
+<div id="loginModal" class="modal">
+  <div class="login-modal-content">
+    <span class="close" onclick="closeLoginModal()">&times;</span>
+    <iframe id="loginIframe" src="login.html" width="850" height="500"></iframe>
+  </div>
+</div>
+<div id="donateModal" class="modal">
+  <div class="login-modal-content">
+    <span class="close" onclick="closedonateModal()">&times;</span>
+    <iframe id="donateIframe" src="donationindex.html" width="900" height="650"></iframe>
+  </div>
+</div>
+  <!-- Your scripts here -->
+  
+  <script>
+      
+ var loginModal = document.getElementById("loginModal");
+  var loginIframe = document.getElementById("loginIframe");
+  var showLoginButton = document.getElementById("showLoginButton");
+
+  function openLoginModal() {
+    loginModal.style.display = "block";
+  }
+
+  function closeLoginModal() {
+    loginModal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target === loginModal || event.target.classList.contains("close")) {
+      closeLoginModal();
+    }
+  };
+
+  showLoginButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    openLoginModal();
+  });
+      
+  var donateModal = document.getElementById("donateModal");
+  var donateIframe = document.getElementById("donateIframe");
+  var showdonateButton = document.getElementById("showdonateButton");
+  
+  function opendonateModal() {
+    donateModal.style.display = "block";
+  }
+
+  function closedonateModal() {
+    donateModal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target === donateModal || event.target.classList.contains("close")) {
+      closedonateModal();
+    }
+  };
+
+  showdonateButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    opendonateModal();
+  });
+
+  const aboutLink = document.querySelector('.dropdown > a');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  aboutLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    dropdownMenu.classList.toggle('show');
+  });
+
+  // Close the dropdown when clicking outside
+  window.addEventListener('click', function (event) {
+    if (!aboutLink.contains(event.target)) {
+      dropdownMenu.classList.remove('show');
+    }
+  });
+        
+        
+        
+ 
+
+ const emailInput = document.getElementById('email1');
+  const thankYouMessage = document.getElementById('thankYouMessage');
+  // Assuming you have a function to validate the email
+  function isValidEmail(email) {
+    // Add your email validation logic here
+    if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+    return true;
+  }
+document.getElementById('subscribeBtn').addEventListener('click', function (e) {
+  e.preventDefault();
+  const emailInput = document.getElementById('email1');
+  const thankYouMessage = document.getElementById('thankYouMessage');
+
+  // Assuming you have a function to validate the email
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  if (isValidEmail(emailInput.value)) {
+    emailInput.value = ''; // Clear the input
+    thankYouMessage.classList.remove('hidden'); // Show the thank you message
+    setTimeout(function () {
+      thankYouMessage.classList.add('hidden'); // Hide the thank you message after a few seconds
+    }, 3000); // Adjust the time as needed (3000ms = 3 seconds)
+  }
+});
+
+
+// ... your previous code ...
+
+// Function to handle subscription in the modal
+function subscribe() {
+  var emailInput = document.getElementById("email");
+  var modalThankYouMessage = document.getElementById("modalThankYouMessage");
+
+  if (isValidEmail(emailInput.value)) {
+    emailInput.value = ''; // Clear the input
+    modalThankYouMessage.classList.remove('hidden'); // Show the thank you message
+    setTimeout(function () {
+      modalThankYouMessage.classList.add('hidden'); // Hide the thank you message after a few seconds
+    }, 3000); // Adjust the time as needed (3000ms = 3 seconds)
+  }
+}
+
+// ... your previous code ...
+
+//function subscribehard
+// ... your previous code ...
+
+//function subscribehardcode1() {
+  // Get the email input element
+ // var emailInput = document.getElementById("email1");
+
+  // Get the value of the email entered by the user
+  //email = emailInput.value;
+
+  // Validate the email address
+ // if (validateEmail(email)) {
+    // Email is valid, proceed with subscription (you can add your subscription logic here)
+    //saveRecord(email);
+   //      alert("Thank you for subscribing!");
+
+     //   } else {
+    // Email is not valid, show an error message
+   // alert("Please enter a valid email address.");
+  //}
+//}/
+document.getElementById("showChartsButton").addEventListener("click", function() {
+    window.location.href = "Stats.html";
+});
+
+document.getElementById("main").addEventListener("click", function() {
+    window.location.href = "mainpage.html";
+});
+
+document.getElementById("contact").addEventListener("click", function() {
+    window.location.href = "contact.html";
+});
+
+</script>
+</body>
+</html>

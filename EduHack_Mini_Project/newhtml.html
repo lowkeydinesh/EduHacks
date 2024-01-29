@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <link rel="stylesheet" type="text/css" href="headerfooter.css">
+
+  <style>
+
+  /* Style for the close button */
+  .close {
+    width: 450px; /* Adjust the width as needed */
+    margin: 0 auto; /* This centers the element horizontally */
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+}
+
+
+  /* Style for the call-to-action button */
+  .subscribe-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6fae62;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .subscribe-button:hover {
+    background-color: #589e4e;
+  }
+
+    /* Add any other custom styles for the modal here */
+  </style>
+    <style> body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3; /* Set background color for the whole page */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: #ffffff; /* Set background color for each card */
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-content {
+            flex: 1;
+        }
+
+        .card-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-link {
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        .card-link a {
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 5px;
+        }
+
+        .card-link a:hover {
+            background-color: #0056b3;
+        }
+
+        .image-container {
+            width: 150px;
+            height: 150px;
+            margin-right: 1rem;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Maintain aspect ratio and cover container */
+        }
+    .login-modal-content {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.donate-modal-content {
+    
+}
+ #loginIframe {
+        border-radius: 14px; /* Adjust the value as needed */
+    }
+    </style>
+</head>
+<body>
+      <header>
+    <div class="logo69" id = "main">
+      <img src="images/icon.png" alt="Your Logo">
+          <p>CarbonAware</p>
+    </div>
+    <nav>
+      <ul>
+<li class="dropdown69">
+      <a href="#">About</a>
+      <ul class="dropdown-menu69">
+        <li><a href="what_we_do.html">What We Do</a></li>
+         <li><a href="partners.html">Partners</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+      <li><a href="newhtml.html">News</a></li>
+      <li><a href="readme.html">Read Me</a></li>
+<!-- Change the link to a button or span element -->
+<li><button id="showLoginButton">Login</button></li>
+        
+        <li><a href="#"  id="showdonateButton" class="action-button">Take Action</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <h1>Read News Related to sustainable future </h1>
+    <div id="headlines"></div>
+<footer class="footer bg-green-900 text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between">
+    <div class="flex items-center">
+      <img src="images/icon.png" alt="Your Logo" class="max-w-12">
+      <p class="text-xl font-bold ml-3">CarbonAware</p>
+    </div>
+    <div class="flex items-center my-2 sm:my-0">
+      <a href="partners.html" class="text-white mr-4">The Team <span>&rarr;</span></a>
+      <a href="contact.html" id="contact" class="text-white">Contact Us <span>&rarr;</span></a>
+    </div>
+    <div class="flex items-center my-2 sm:my-0">
+      <!-- Replace the URLs and icons with appropriate ones -->
+      <a href="https://twitter.com/" class="mr-4"><img src="images/twitter-icon.png" alt="Twitter" class="w-6 h-6"></a>
+      <a href="https://www.instagram.com/" class="mr-4"><img src="images/instagram-icon.png" alt="Instagram" class="w-6 h-6"></a>
+      <a href="https://www.youtube.com/" class="mr-4"><img src="images/youtube-icon.png" alt="YouTube" class="w-6 h-6"></a>
+      <a href="https://www.facebook.com/"><img src="images/facebook-icon.png" alt="Facebook" class="w-6 h-6"></a>
+ </div>
+    <div class="flex items-center my-2 sm:my-0">
+      <form class="flex">
+        <input type="email" id="email1" placeholder="Your Email Address" class="px-4 py-2 rounded-l-md border border-r-0 border-white focus:outline-none focus:ring focus:border-blue-300 text-black">
+        <button type="submit" id="subscribeBtn" class="px-4 py-2 rounded-r-md bg-white text-black font-bold">Subscribe</button>
+      </form>
+      <p id="thankYouMessage" class="ml-2 text-sm text-green-500 hidden">Thank you for subscribing!</p>
+    </div>
+  </div>
+  <p class="text-center">&copy; 2023 Our Organization. All rights reserved.</p>
+</footer>
+    
+<div id="loginModal" class="modal">
+  <div class="login-modal-content">
+    <span class="close" onclick="closeLoginModal()">&times;</span>
+    <iframe id="loginIframe" src="login.html" width="850" height="500"></iframe>
+  </div>
+</div>
+<div id="donateModal" class="modal">
+  <div class="login-modal-content">
+    <span class="close" onclick="closedonateModal()">&times;</span>
+    <iframe id="donateIframe" src="donationindex.html" width="900" height="650"></iframe>
+  </div>
+</div>
+    <script src="your_custom_script.js"></script>
+
+    <script>
+        
+         var loginModal = document.getElementById("loginModal");
+  var loginIframe = document.getElementById("loginIframe");
+  var showLoginButton = document.getElementById("showLoginButton");
+
+  function openLoginModal() {
+    loginModal.style.display = "block";
+  }
+
+  function closeLoginModal() {
+    loginModal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target === loginModal || event.target.classList.contains("close")) {
+      closeLoginModal();
+    }
+  };
+
+  showLoginButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    openLoginModal();
+  });
+      
+  var donateModal = document.getElementById("donateModal");
+  var donateIframe = document.getElementById("donateIframe");
+  var showdonateButton = document.getElementById("showdonateButton");
+  
+  function opendonateModal() {
+    donateModal.style.display = "block";
+  }
+
+  function closedonateModal() {
+    donateModal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target === donateModal || event.target.classList.contains("close")) {
+      closedonateModal();
+    }
+  };
+
+  showdonateButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    opendonateModal();
+  });
+  
+  const aboutLink = document.querySelector('.dropdown > a');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  aboutLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    dropdownMenu.classList.toggle('show');
+  });
+
+  // Close the dropdown when clicking outside
+  window.addEventListener('click', function (event) {
+    if (!aboutLink.contains(event.target)) {
+      dropdownMenu.classList.remove('show');
+    }
+  });
+        
+
+      
+    //  document.getElementById("subscribeBtn").addEventListener("click", subscribe);
+// Function to handle form submission
+ const emailInput = document.getElementById('email1');
+  const thankYouMessage = document.getElementById('thankYouMessage');
+
+  // Assuming you have a function to validate the email
+  function isValidEmail(email) {
+    // Add your email validation logic here
+    if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+    return true;
+  }
+
+  document.getElementById('subscribeBtn').addEventListener('click', function (e) {
+    e.preventDefault();
+    if (isValidEmail(emailInput.value)) {
+        emailInput.value = ''; // Clear the input
+      thankYouMessage.classList.remove('hidden'); // Show the thank you message
+      setTimeout(function () {
+        thankYouMessage.classList.add('hidden'); // Hide the thank you message after a few seconds
+      }, 3000); // Adjust the time as needed (3000ms = 3 seconds)
+    }
+  });
+  
+function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+// ... your previous code ...
+
+// Function to handle subscription in the modal
+function subscribe() {
+  var emailInput = document.getElementById("email");
+  var modalThankYouMessage = document.getElementById("modalThankYouMessage");
+
+  if (isValidEmail(emailInput.value)) {
+    emailInput.value = ''; // Clear the input
+    modalThankYouMessage.classList.remove('hidden'); // Show the thank you message
+    setTimeout(function () {
+      modalThankYouMessage.classList.add('hidden'); // Hide the thank you message after a few seconds
+    }, 3000); // Adjust the time as needed (3000ms = 3 seconds)
+  }
+}
+
+// ... your previous code ...
+
+      
+// Function to handle form submission
+function subscribehardcode() {
+  // Get the email input element
+  var emailInput = document.getElementById("email1");
+
+  // Get the value of the email entered by the user
+  email = emailInput.value;
+
+  // Validate the email address
+  if (validateEmail(email)) {
+    // Email is valid, proceed with subscription (you can add your subscription logic here)
+   // saveRecord(email);
+       alert("Thank you for subscribing!");
+
+  } else {
+    // Email is not valid, show an error message
+    alert("Please enter a valid email address.");
+  }
+}
+
+</script>
+</body>
+</html>
